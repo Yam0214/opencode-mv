@@ -39,27 +39,39 @@ All database changes are wrapped in a transaction. If the directory move fails a
 
 ## Installation
 
-### uv (recommended)
+### Daily use — install from GitHub
+
+Get the latest stable release directly from the repository:
 
 ```bash
-uv tool install git+<repo-url>
-# or from a local clone:
-uv tool install .
+# with uv (recommended)
+uv tool install git+https://github.com/Yam0214/opencode-mv
+
+# with pipx
+pipx install git+https://github.com/Yam0214/opencode-mv
 ```
 
-### pipx
+To update to a newer version, run the same command with `--upgrade`:
 
 ```bash
-pipx install git+<repo-url>
-# or from a local clone:
-pipx install .
+uv tool install --upgrade git+https://github.com/Yam0214/opencode-mv
 ```
 
-### pip (editable)
+### Local development — editable install
+
+If you're developing or testing changes, clone the repo and install in editable mode. This links the package to your local source directory so any edits take effect immediately without reinstallation:
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/Yam0214/opencode-mv
 cd opencode-mv
+
+# with uv (recommended)
+uv tool install -e .
+
+# with pipx
+pipx install -e .
+
+# with pip
 pip install -e .
 ```
 
@@ -70,10 +82,13 @@ pip install -e .
 ## Uninstall
 
 ```bash
+# if installed with uv
 uv tool uninstall opencode-mv
-# or:
+
+# if installed with pipx
 pipx uninstall opencode-mv
-# or:
+
+# if installed with pip
 pip uninstall opencode-mv
 ```
 

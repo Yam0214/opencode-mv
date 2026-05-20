@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opencode-mv"
+version = "0.1.0"
+description = "Move projects and update opencode database to maintain session continuity"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+opencode-mv = "opencode_mv:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
